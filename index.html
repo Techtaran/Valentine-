@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Quiz for Viran 💖</title>
+<title>Hey Viran</title>
 <style>
 body {
-  background: pink;
-  text-align: center;
+  background: url("https://i.imgur.com/7yUvePI.gif");
+  background-size: cover;
+  text-align:center;
   font-family: Comic Sans MS;
-  padding-top: 100px;
+  padding-top:100px;
 }
-button {
-  padding: 15px 30px;
-  font-size: 20px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-}
-#yes { background: red; color: white; }
-#no, #maybe { background: white; }
 
+button {
+  padding:15px 25px;
+  font-size:20px;
+  border-radius:20px;
+  border:none;
+  position:absolute;
+}
+
+#no, #yes, #more {
+  background:white;
+}
+
+#msg {
+  position:fixed;
+  right:10px;
+  top:10px;
+  font-size:18px;
+  color:white;
+}
 </style>
 </head>
+
 <body>
 
-<h1>Hey Viran… Do you love me? 🥺❤️</h1>
+<h1>🌻 Hey Viran, do you love Taran? 🌻</h1>
 
-<button id="yes" onclick="window.location.href='page2.html'">YES 😘</button>
-<button id="no">NO 😈</button>
-<button id="maybe">MAYBE 😏</button>
+<div id="msg">You have no option buddy 😈<br>No one can save you now. All the best.</div>
+
+<button id="no" onmouseover="move(this)">No</button>
+<button id="yes" onmouseover="move(this)">Yes</button>
+<button id="more" onmouseover="move(this)">More than anything</button>
+
+<br><br><br><br>
+<button onclick="window.location.href='page2.html'">Next 🤌🏻</button>
 
 <script>
-const moveBtn = (btn) => {
-  btn.onmouseover = () => {
-    btn.style.position = "absolute";
-    btn.style.left = Math.random() * 80 + "vw";
-    btn.style.top = Math.random() * 80 + "vh";
-  };
-};
-moveBtn(document.getElementById("no"));
-moveBtn(document.getElementById("maybe"));
+function move(btn){
+  btn.style.left = Math.random()*300 + "px";
+  btn.style.top = Math.random()*300 + "px";
+}
 </script>
 
 </body>

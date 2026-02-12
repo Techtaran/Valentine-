@@ -4,10 +4,9 @@
 <title>Hey Viran</title>
 <style>
 body {
-  background: url("https://i.imgur.com/7yUvePI.gif");
-  background-size: cover;
+  background: pink;
   text-align:center;
-  font-family: Comic Sans MS;
+  font-family: 'Comic Sans MS', cursive;
   padding-top:100px;
 }
 
@@ -17,6 +16,7 @@ button {
   border-radius:20px;
   border:none;
   position:absolute;
+  cursor:pointer;
 }
 
 #no, #yes, #more {
@@ -28,15 +28,13 @@ button {
   right:10px;
   top:10px;
   font-size:18px;
-  color:white;
+  color:red;
 }
 </style>
 </head>
-
 <body>
 
 <h1>🌻 Hey Viran, do you love Taran? 🌻</h1>
-
 <div id="msg">You have no option buddy 😈<br>No one can save you now. All the best.</div>
 
 <button id="no" onmouseover="move(this)">No</button>
@@ -52,6 +50,5 @@ function move(btn){
   btn.style.top = Math.random()*300 + "px";
 }
 </script>
-
 </body>
 </html>

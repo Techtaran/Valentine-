@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Propose Me</title>
+<title>Hey Viran</title>
 <style>
 body {
-  background:pink;
+  background: pink;
   text-align:center;
-  font-family: Comic Sans MS;
+  font-family: 'Comic Sans MS', cursive;
   padding-top:100px;
 }
+
 button {
-  padding:15px 30px;
+  padding:15px 25px;
   font-size:20px;
   border-radius:20px;
   border:none;
+  position:absolute;
+  cursor:pointer;
+}
+
+#no, #yes, #more {
+  background:white;
+}
+
+#msg {
+  position:fixed;
+  right:10px;
+  top:10px;
+  font-size:18px;
+  color:red;
 }
 </style>
 </head>
-
 <body>
 
-<h1>Propose me? 💍</h1>
+<h1>🌻 Hey Viran, do you love Taran? 🌻</h1>
+<div id="msg">You have no option buddy 😈<br>No one can save you now. All the best.</div>
 
-<button onclick="alert('👊 Punch for wrong answer 😂')">I love you baby</button>
-<button onclick="alert('Wrong girl name bro 😏')">I love you palak</button>
-<button onclick="showLove()">I love you bache</button>
+<button id="no" onmouseover="move(this)">No</button>
+<button id="yes" onmouseover="move(this)">Yes</button>
+<button id="more" onmouseover="move(this)">More than anything</button>
+
+<br><br><br><br>
+<button onclick="window.location.href='page2.html'">Next 🤌🏻</button>
 
 <script>
-function showLove(){
-  alert("🥺");
-  document.body.innerHTML += "<h2>🤗💋🤗💋</h2><button onclick=\"window.location.href='page3.html'\">Next 💌</button>";
+function move(btn){
+  btn.style.left = Math.random()*300 + "px";
+  btn.style.top = Math.random()*300 + "px";
 }
 </script>
-
 </body>
 </html>
